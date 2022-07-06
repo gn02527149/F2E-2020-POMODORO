@@ -1,0 +1,102 @@
+.side-page{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #333333;
+
+    #side-page-menu{
+        width: 80px;
+        height: 100%;
+        overflow: hidden;
+
+        i.material-icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            color: #fff;
+            cursor: pointer;
+            transition: all .5s;
+            &[data-menu-clicked=true]{
+                color: #EA5548;
+            }
+            &:hover{
+                transform: translateY(-10px);
+                transition: all .5s;
+            }
+        }
+    }
+    
+    #control-button{
+        position: absolute;
+        width: 90px;
+        height: 50px;
+        bottom: 35px;
+        left: -25px;
+        
+        input#control-nav{
+            position: relative;
+            display: inline-block;
+            top: 12px;
+            left: 12px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            cursor: pointer;
+            &:checked + label::after{
+                position: absolute;
+                display: block;
+                content: '→';
+                top: 5px;
+                right: 12px;
+                font-size: 25px;
+                color: #333333;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: #EA5548;
+                z-index: 2;
+            }
+            &::after{
+                position: absolute;
+                display: block;
+                content: '';
+                right: 0;
+                width: 4px;
+                height: 6px;
+                border-radius: 10px;
+                transform: rotate(45deg);
+                background-color: #316901;
+                z-index: 2;
+            }
+        }
+        label[for=control-nav]{
+            position: absolute;
+            top: 0;
+            display: block;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color:#FCFCFC;
+            border-radius: 25px 5px 5px 25px;
+            cursor: pointer;
+            &::after{
+                position: absolute;
+                display: block;
+                content: '←';
+                top: 5px;
+                right: 12px;
+                font-size: 25px;
+                color: #333333;
+            }
+        }
+    }
+}

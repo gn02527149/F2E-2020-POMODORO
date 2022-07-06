@@ -1,0 +1,11 @@
+.task-circles{
+    display: flex;
+
+    .task-circle{
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+    .task-circle-past{
+        background-color: #EA5548;
+    }
+}

@@ -1,0 +1,47 @@
+.main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .orange {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        margin-bottom: 80px;
+        .color {
+            background: #FF7765;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+        &::before{
+            content: "";
+            background: #6DC996;
+            border-radius: 8px;
+            position: absolute;
+            top: -45px;
+            transform: rotate(15deg);
+            width: 30px;
+            height: 80px;
+            z-index: -1;
+            margin-left: 30px;
+        }
+
+        &::after{
+            content: 'You don’t have any task now.';
+            position: absolute;
+            bottom: -3vw;
+            font-family: 'Avenir';
+            font-size: 22px;
+            line-height: 38px;
+            text-align: center;
+            color: #282323;
+            font-weight: 100;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.task-timer{
+    .task-now{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        &::before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: auto;
+            z-index: 4;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #ACACAC;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        svg{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            transform: rotate(-90deg);
+            background:yellowgreen;
+            border-radius: 50%;
+            z-index: 3;
+            
+            circle.circle1{
+                fill: #ACACAC;
+                
+                stroke: #EA5548;
+                stroke-width: 100px;
+                
+                /* 虛線長度 虛線彼此間的間距 */
+                // stroke-dasharray: 942 942;
+                &[data-stroke-break=false]{
+                    stroke: #B5E254;
+                }
+            }
+        }
+        .task-now-timer{
+            font-size: 70px;
+            line-height: 48px;
+            color: #fff;
+            font-family: 'Avenir';
+            font-weight: 700;
+            z-index: 5;
+        }
+    }
+    .task-complete{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        label{
+            position: relative;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 700;
+            color: #333333;
+            cursor: pointer;
+            
+            &::before{
+                position: absolute;
+                display: block;
+                content: '';
+                top: 0;
+                left: -20px;
+                width: 16px;
+                height: 16px;
+                border: 2px solid #EA5548;
+                box-sizing: border-box;
+                border-radius: 50%;
+                background-color: #EAEAEA;
+            }
+        }
+    }
+}

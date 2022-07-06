@@ -1,0 +1,32 @@
+.task-block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title{
+        font-size: 24px;
+        line-height: 29px;
+        color: #333333;
+        margin: 10px 0;
+        font-weight: 700;
+    }
+    .break-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 15px;
+        font-size: 10px;
+        line-height: 12px;
+        background-color: #B5E254;
+        color: #FCFCFC;
+        border-radius: 8px;
+    }
+    .task-circles{
+        .task-circle{
+            width: 12px;
+            height: 12px;
+            border: 2px solid #EA5548;
+            margin: 0 5px;
+        }
+    }
+}
